@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANA BOLEGA</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure custom colors matching the design -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-bg': '#1a1033',      // Deep purple background
+                        'brand-card': '#241744',    // Slightly lighter purple for cards
+                        'brand-orange': '#ff6200',  // Vibrant orange for text/accents
+                        'brand-btn-start': '#ff8a00',
+                        'brand-btn-end': '#e55800',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Standard clean font
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1033; /* Fallback */
+        }
+        
+        /* Gradient text effect for specific words if needed */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle glow for the main button */
+        .btn-glow {
+            box-shadow: 0 4px 20px rgba(255, 98, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 6px 25px rgba(255, 98, 0, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Profile image ring styling */
+        .profile-ring {
+            background: linear-gradient(135deg, #a855f7, #ff6200);
+            padding: 4px;
+            border-radius: 50%;
+        }
+        
+        /* Blinking effect for the colon in countdown */
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+    <!-- Load Phosphor Icons for the feature boxes -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-brand-bg text-white min-h-screen flex flex-col items-center justify-center p-4">
+
+    <main class="w-full max-w-md mx-auto flex flex-col items-center space-y-6 pt-8 pb-12">
+        
+        <!-- Profile Image -->
+        <div class="profile-ring w-40 h-40 shadow-lg">
+            <!-- Using a placeholder image, in reality, this would be an actual photo -->
+            <img src="https://placehold.co/400x400/2a1b4d/ffffff?text=RANA" 
+                 alt="Rana Profile" 
+                 class="w-full h-full rounded-full object-cover border-4 border-brand-bg">
+        </div>
+
+        <!-- Header Text -->
+        <div class="text-center space-y-1 w-full mt-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight uppercase">RANA</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-brand-orange uppercase">BOLEGA</h1>
+            <p class="text-purple-300 text-sm md:text-base tracking-widest uppercase mt-3 font-semibold">
+                CRICKET MASTERY
+            </p>
+        </div>
+
+        <!-- Call to Action Area -->
+        <div class="w-full w-full max-w-sm flex flex-col items-center mt-6 space-y-3">
+            <a href="#" class="w-full block">
+                <button class="w-full bg-gradient-to-b from-brand-btn-start to-brand-btn-end text-white font-bold py-4 rounded-xl text-lg uppercase tracking-wide btn-glow">
+                    SUBSCRIBE NOW
+                </button>
+            </a>
+            <p class="text-gray-400 text-sm font-medium">
+                100K+ members getting verified tips
+            </p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="mt-4 bg-brand-card/50 border border-purple-500/30 rounded-full px-6 py-2 flex items-center space-x-2">
+            <span class="text-gray-300 text-sm font-medium">ENDS IN:</span>
+            <span class="text-brand-orange font-bold text-lg tabular-nums" id="countdown">
+                <span id="min">00</span><span class="blink">:</span><span id="sec">55</span>
+            </span>
+        </div>
+
+        <!-- Stats/Features Grid -->
+        <div class="grid grid-cols-3 gap-3 w-full mt-6">
+            
+            <!-- Feature 1 -->
+            <div class="bg-brand-card rounded-2xl p-4 flex flex-col items-center justify-center text-center border border-white/5 shadow-md">
+                <i class="ph ph-check text-brand-orange text-2xl mb-2"></i>
+                <h3 class="font-bold text-lg leading-none mb-1">100%</h3>
+                <p class="text-[10px] text-gray-400 uppercase tracking-wide">ACCURACY</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-brand-card rounded-2xl p-4 flex flex-col items-center justify-center text-center border border-white/5 shadow-md">
+                <i class="ph ph-star text-brand-orange text-2xl mb-2"></i>
+                <h3 class="font-bold text-lg leading-none mb-1">100K+</h3>
+                <p class="text-[10px] text-gray-400 uppercase tracking-wide">MEMBERS</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-brand-card rounded-2xl p-4 flex flex-col items-center justify-center text-center border border-white/5 shadow-md">
+                <i class="ph ph-headset text-brand-orange text-2xl mb-2"></i>
+                <h3 class="font-bold text-lg leading-none mb-1">24/7</h3>
+                <p class="text-[10px] text-gray-400 uppercase tracking-wide">SUPPORT</p>
+            </div>
+
+        </div>
+
+        <!-- Footer Trust Badges -->
+        <div class="flex items-center justify-center space-x-4 mt-8 text-sm text-gray-300">
+            <div class="flex items-center space-x-1">
+                <i class="ph ph-check text-green-500"></i>
+                <span>Verified</span>
+            </div>
+            <span class="text-gray-600">•</span>
+            <div class="flex items-center space-x-1">
+                <i class="ph ph-check text-green-500"></i>
+                <span>Secure</span>
+            </div>
+            <span class="text-gray-600">•</span>
+            <div class="flex items-center space-x-1">
+                <i class="ph ph-check text-green-500"></i>
+                <span>Instant</span>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Simple countdown timer logic
+        document.addEventListener('DOMContentLoaded', () => {
+            let totalSeconds = 55; // Starting at 55 seconds as per screenshot
+            const minEl = document.getElementById('min');
+            const secEl = document.getElementById('sec');
+
+            const updateTimer = () => {
+                if (totalSeconds <= 0) {
+                    // Optional: Reset timer or keep at 0
+                    totalSeconds = 60 * 5; // Reset to 5 mins for demo
+                }
+                
+                const m = Math.floor(totalSeconds / 60);
+                const s = totalSeconds % 60;
+                
+                minEl.textContent = m.toString().padStart(2, '0');
+                secEl.textContent = s.toString().padStart(2, '0');
+                
+                totalSeconds--;
+            };
+
+            setInterval(updateTimer, 1000);
+        });
+    </script>
+</body>
+</html>
