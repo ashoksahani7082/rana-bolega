@@ -45,6 +45,7 @@
             }
         }
     </script>
+
     <style>
         /* Import Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
@@ -91,6 +92,7 @@
     <!-- Load Phosphor Icons for the feature boxes -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body class="bg-brand-bg text-white min-h-screen flex flex-col items-center justify-center p-4">
 
     <main class="w-full max-w-md mx-auto flex flex-col items-center space-y-6 pt-8 pb-12">
@@ -98,13 +100,14 @@
         <!-- Profile Image -->
         <div class="profile-ring w-40 h-40 shadow-lg">
             <!-- 
-                CHANGE PROFILE PICTURE HERE:
-                Replace the 'src' value below with the URL of your desired image.
-                Example: src="https://example.com/your-photo.jpg"
+                FIXED: Changed src to "rana-bolega.jpg" (without spaces).
+                MAKE SURE to rename the actual image file on your PC/Phone to "rana-bolega.jpg"
+                and keep it in the same folder as this HTML file.
             -->
-            <img src="Rana bolega.jpg" 
+            <img src="rana-bolega.jpg" 
                  id="profile-image"
                  alt="Rana Profile" 
+                 onerror="this.src='https://placehold.co/160x160/241744/ff6200?text=RANA'"
                  class="w-full h-full rounded-full object-cover border-4 border-brand-bg">
         </div>
 
@@ -118,7 +121,7 @@
         </div>
 
         <!-- Call to Action Area -->
-        <div class="w-full w-full max-w-sm flex flex-col items-center mt-6 space-y-3">
+        <div class="w-full max-w-sm flex flex-col items-center mt-6 space-y-3">
             <a href="https://t.me/+COz0gTJbUhI4NzBl" class="w-full block" target="_blank" rel="noopener noreferrer">
                 <button class="w-full bg-gradient-to-b from-brand-btn-start to-brand-btn-end text-white font-bold py-4 rounded-xl text-lg uppercase tracking-wide btn-glow">
                     SUBSCRIBE NOW
